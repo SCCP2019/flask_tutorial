@@ -10,7 +10,7 @@ def hello():
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
-    # None は値が存在しないことを示す定数
+    # NOTE: None は値が存在しないことを示す定数
     error = None
     if request.method == "POST":
         if valid_login(request.form["username"], request.form["password"]):
@@ -21,7 +21,8 @@ def login():
 
 
 def valid_login(username=None, password=None):
-    if len(username) > 0 and len(password) > 0:
+    # NOTE: まだデータベースなどのシステムを使えないためにユーザー認証の実装ができないのでハードコードした値と比較しています.
+    if username == "student" and password == "password" : # 好きな値に変更してみてください
         return True
     return False
 
