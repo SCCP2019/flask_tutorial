@@ -29,11 +29,17 @@
 例えばログインのための認証やセッション管理などには
 
 - Authorization
+  - `Authorization: <type> <credential>`といった形でよく使用されるのは`Authorization: Bearer <token>`
+  - ex) `Authorization: Bearer czEyNDAxMTkucGFzc3dvcmQK`
 - Cookie
+  - `Cookie: <cookie-list>` という構文で書かれます
+  - ex) `Cookie: name=value; name2=value2; name3=value3`
 - Set-Cookie
-  などが使われたりします。
+  - `Set-Cookie: <cookie-name>=<cookie-value>` という構文で書かれます。
+  - ex) `Set-Cookie: name=value; name2=value2; name3=value3`
 
 ## Content-Type
+
 ### Content-Type とは
 
 `Content-Type` とはリソースのメディア種別(画像や音声など)を示すために使用されます。
@@ -54,8 +60,12 @@
 | image/jpeg             | JPEG ファイル       |
 
 ### 参考資料
-#### headerについて
+
+#### header について
+
 - [MDN web docs](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers)
-#### Content-Typeについて
+
+#### Content-Type について
+
 - [MDN web docs](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Type)
 - [Wikipedia メディアタイプ](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%BF%E3%82%A4%E3%83%97#%E4%B8%BB%E3%81%AA%E4%BE%8B)
